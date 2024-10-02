@@ -1,0 +1,5 @@
+ extern const unsigned char FlashNetVersionString[];
+ extern const double FlashNetVersionNumber;
+
+ const unsigned char FlashNetVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:FlashNet  PROJECT:FlashNet-1" "\n";
+ const double FlashNetVersionNumber __attribute__ ((used)) = (double)1.;
