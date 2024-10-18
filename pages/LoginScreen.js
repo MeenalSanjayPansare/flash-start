@@ -14,7 +14,7 @@ const LoginScreen = ({ navigation }) => {
         email: email,
         password: password,
       });
-
+      
       // If login is successful
       if (response.status === 200) {
         Alert.alert('Login Successful', 'Welcome back!');
@@ -50,7 +50,7 @@ const LoginScreen = ({ navigation }) => {
         autoCapitalize="none"
       />
 
-      <Button title={loading ? 'Logging in...' : 'Login'} onPress={handleLogin} disabled={loading} />
+      <Button title={loading ? 'Logging in...' : 'Login1'} onPress={handleLogin} disabled={loading}  />
 
       {/* Optional: Forgot password or other actions */}
       <Text style={styles.link} onPress={() => navigation.navigate('ForgotPassword')}>
