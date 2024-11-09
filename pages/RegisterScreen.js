@@ -14,7 +14,7 @@ const RegisterScreen = ({ navigation }) => {
         email: email,
         password: password,
       });
-      
+      console.log("I am here");
       // If login is successful
       if (response.status === 500) {
         Alert.alert('Registeration Successful!');
@@ -31,7 +31,7 @@ const RegisterScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Create yout account</Text>
-
+      
       <TextInput
         style={styles.input}
         placeholder="Email"

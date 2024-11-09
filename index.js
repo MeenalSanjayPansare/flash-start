@@ -7,7 +7,7 @@ import App from './App';
 import {name as appName} from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);
-
+/*
 const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
@@ -84,4 +84,4 @@ app.post('/register', (req, res) => {
 // Start the server
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
-});
+});*/

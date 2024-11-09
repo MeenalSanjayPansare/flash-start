@@ -1,11 +1,44 @@
-const express = require('express');
-const mysql = require('mysql');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+/*import express from "express";
+//const mysql = require('mysql');
+//const bodyParser = require('body-parser');
+//const cors = require('cors');
 
 const app = express();
 const port = 3000;
 
+function logger(req, res, next){
+  console.log("Request Method: ", req.method);
+  console.log("Request URL: ", req.url);
+  next();
+  }
+
+  app.use(logger);
+
+
+app.get('/', (req, res) => {
+  //console.log(req.rawHeaders);
+  res.send("<h1>Hello World</h1>");
+});
+
+app.get('/about', (req, res) => {
+  //console.log(req.rawHeaders);
+  res.send("<h1>about me</h1><h2>My name is MIU </h2>");
+});
+
+app.get('/contactMe', (req, res) => {
+  //console.log(req.rawHeaders);
+  res.send("<h1>Contact no</h1><p>+1234567789</p>");
+});
+app.listen(port,()=>{
+  console.log(`server running on port ${port}.`);
+});
+app.put('/', (req, res) => {
+  res.sendStatus(200);
+});
+app.put("/user/Meenal", (req, res) => {
+  res.sendStatus(200);
+});
+/*
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
@@ -74,4 +107,21 @@ app.post('/register', (req, res) => {
 // Start the server
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
+});*/
+
+import express from "express";
+import {dirname} from "path";
+import { fileURLToPath } from "url";
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+
+const app = express();
+const port = 3000;
+
+app.get("/",(req,res) => {
+  res.sendFile(__dirname + "/public/index.html");
+});
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
